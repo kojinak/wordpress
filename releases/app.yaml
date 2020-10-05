@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: wordpress
+  namespace: wordpress
+spec:
+  releaseName: wordpress
+  chart:
+    git: https://github.com/kojinak/wordpress
+    ref: master
+    path: charts/wordpress
+  values:
+    serviceName: wordpress
