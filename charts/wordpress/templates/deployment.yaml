@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "wordpress.fullname" . }}
+  name: {{.Release.Name}}
   namespace: {{ .Release.Namespace }}
 spec:
   replicas: 1
